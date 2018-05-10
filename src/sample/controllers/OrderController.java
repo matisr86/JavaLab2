@@ -5,7 +5,6 @@ import javafx.scene.control.Label;
 public class OrderController {
 
     private ShopController shopController ;
-    String message = shopController.toString() ;
     @FXML
     private Label listLabel;
 
