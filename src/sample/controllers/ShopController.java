@@ -13,8 +13,8 @@ import java.io.IOException;
 public class ShopController {
 
     private String message ="Zamówiono: ";
-
     private MainController mainController ;
+
     @FXML
     private CheckBox CheryCh;
 
@@ -45,7 +45,9 @@ public class ShopController {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
         mainController.setScreen(vBox);
+
 
     }
 
@@ -60,8 +62,7 @@ public class ShopController {
         if(AppleCh.isSelected()) message+="jabłka, " ;
     }
 
-    @Override
-    public String toString() {
-        return  message;
+    public String getMessage() {
+        return message;
     }
 }
