@@ -11,7 +11,7 @@ public class OrderController {
 
     @FXML
     public void initialize() {
-    listLabel.setText(shopController.getMessage());
+        // listLabel.setText(shopController.getMessage()); //z tym nie działa !!!
     }
 
 }
