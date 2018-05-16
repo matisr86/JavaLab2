@@ -13,8 +13,8 @@ import java.io.IOException;
 public class ShopController {
 
     private String message ="Zamówiono: ";
-    private MainController mainController ;
 
+    private MainController mainController ;
     @FXML
     private CheckBox CheryCh;
 
@@ -32,7 +32,7 @@ public class ShopController {
 
     @FXML
     public void initialize(){
-        CarrotCh.setSelected(true);
+
     }
     @FXML
     void SendOnAction(ActionEvent event) {
@@ -42,12 +42,12 @@ public class ShopController {
         VBox vBox = null ;
         try {
             vBox = loader.load() ;
+            OrderController orderController = loader.getController();
+            orderController.setMessage(message);
         } catch (IOException e) {
             e.printStackTrace();
         }
-
         mainController.setScreen(vBox);
-
 
     }
 
@@ -60,9 +60,11 @@ public class ShopController {
         if(BananaCh.isSelected()) message+="banany, " ;
         if(CarrotCh.isSelected()) message+="marchewki, " ;
         if(AppleCh.isSelected()) message+="jabłka, " ;
+
     }
 
-    public String getMessage() {
-        return message;
+    @Override
+    public String toString() {
+        return  message;
     }
 }

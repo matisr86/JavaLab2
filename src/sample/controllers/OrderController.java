@@ -5,13 +5,17 @@ import javafx.scene.control.Label;
 public class OrderController {
 
     private ShopController shopController ;
+    private String message ;
 
     @FXML
     private Label listLabel;
 
+
     @FXML
     public void initialize() {
-        // listLabel.setText(shopController.getMessage()); //z tym nie działa !!!
     }
 
+    public void setMessage(String message) {
+        listLabel.setText(message);
+    }
 }
